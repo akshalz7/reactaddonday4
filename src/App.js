@@ -3,7 +3,7 @@ import './App.css';
 import { Route,Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import View from './components/View';
-import Addstudent from './components/Addstudent';
+import Addlibrary from './components/Addlibrary';
 function App() {
   return (
     <div className="App">
@@ -11,7 +11,9 @@ function App() {
       <Routes>
         
         <Route path='/' element={<View />} />
-        <Route path='/Add' element={<Addstudent />}/>
+        <Route path='/Add'
+         element={<Addlibrary data={{id: '',genre:'',title:''}} 
+         method="post"/>}/>
 
       </Routes>
       
